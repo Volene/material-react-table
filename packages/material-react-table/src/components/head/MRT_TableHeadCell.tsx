@@ -167,8 +167,8 @@ export const MRT_TableHeadCell = <TData extends MRT_RowData>({
       data-index={staticColumnIndex}
       data-pinned={!!isColumnPinned || undefined}
       data-allows-sorting={column.getCanSort()}
-      aria-sort={column.getIsSorted() ? (column.getIsSorted() === 'asc' ? 'ascending' : 'descending') : 'none'}
       data-sort-direction={column.getIsSorted() === 'asc' ? 'ascending' : 'descending' ?? undefined}
+      aria-sort={column.getIsSorted() ? (column.getIsSorted() === 'asc' ? 'ascending' : 'descending') : 'none'}
       onDragEnter={handleDragEnter}
       onDragOver={handleDragOver}
       ref={(node: HTMLTableCellElement) => {
